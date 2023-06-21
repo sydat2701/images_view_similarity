@@ -1,0 +1,2 @@
+#----------------------------------------prediction----------------------------------------------------------
+yolo task=detect mode=predict model=/home/nts1/users/datts/image_matching/ultralytics-main/runs/detect/train/weights/best.pt source=/home/nts1/users/datts/image_matching/ultralytics-main/test_img/1.jpg

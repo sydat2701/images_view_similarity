@@ -1,0 +1,2 @@
+#------------------------------------final app with LoFTR and yolov8----------------------------------------------------------
+python3 app.py --input_dir test_img/img8 --input_pairs pairs/img8.txt

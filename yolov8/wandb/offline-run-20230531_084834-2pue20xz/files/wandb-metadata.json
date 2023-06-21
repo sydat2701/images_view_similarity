@@ -1,0 +1,18 @@
+{
+    "os": "Linux-5.15.0-48-generic-x86_64-with-glibc2.17",
+    "python": "3.8.13",
+    "heartbeatAt": "2023-05-31T01:48:34.386083",
+    "startedAt": "2023-05-31T01:48:34.337633",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2080",
+    "gpu_count": 1,
+    "cpu_count": 16,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "host": "unknow",
+    "username": "nts1",
+    "executable": "/home/nts1/miniconda3/envs/datts/bin/python3"
+}

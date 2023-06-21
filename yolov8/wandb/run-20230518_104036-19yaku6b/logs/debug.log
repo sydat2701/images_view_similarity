@@ -1,0 +1,89 @@
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_setup.py:_flush():68] Configure stats pid to 1160312
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_setup.py:_flush():68] Loading settings from /home/nts1/.config/wandb/settings
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_setup.py:_flush():68] Loading settings from /home/nts1/users/datts/image_matching/ultralytics-main/wandb/settings
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': 'train.py'}
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_init.py:_log_setup():476] Logging user logs to /home/nts1/users/datts/image_matching/ultralytics-main/wandb/run-20230518_104036-19yaku6b/logs/debug.log
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_init.py:_log_setup():477] Logging internal logs to /home/nts1/users/datts/image_matching/ultralytics-main/wandb/run-20230518_104036-19yaku6b/logs/debug-internal.log
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_init.py:init():516] calling init triggers
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'task': 'detect', 'mode': 'train', 'model': 'yolov8s.pt', 'data': '/home/nts1/users/datts/image_matching/ultralytics-main/ultralytics/datasets/station.yaml', 'epochs': 3, 'patience': 50, 'batch': 16, 'imgsz': 640, 'save': True, 'save_period': -1, 'cache': False, 'device': None, 'workers': 8, 'project': None, 'name': None, 'exist_ok': False, 'pretrained': False, 'optimizer': 'SGD', 'verbose': True, 'seed': 0, 'deterministic': True, 'single_cls': False, 'rect': False, 'cos_lr': False, 'close_mosaic': 0, 'resume': False, 'amp': True, 'overlap_mask': True, 'mask_ratio': 4, 'dropout': 0.0, 'val': True, 'split': 'val', 'save_json': False, 'save_hybrid': False, 'conf': None, 'iou': 0.7, 'max_det': 300, 'half': False, 'dnn': False, 'plots': True, 'source': None, 'show': False, 'save_txt': False, 'save_conf': False, 'save_crop': False, 'show_labels': True, 'show_conf': True, 'vid_stride': 1, 'line_width': None, 'visualize': False, 'augment': False, 'agnostic_nms': False, 'classes': None, 'retina_masks': False, 'boxes': True, 'format': 'torchscript', 'keras': False, 'optimize': False, 'int8': False, 'dynamic': False, 'simplify': False, 'opset': None, 'workspace': 4, 'nms': False, 'lr0': 0.01, 'lrf': 0.01, 'momentum': 0.937, 'weight_decay': 0.0005, 'warmup_epochs': 3.0, 'warmup_momentum': 0.8, 'warmup_bias_lr': 0.1, 'box': 7.5, 'cls': 0.5, 'dfl': 1.5, 'pose': 12.0, 'kobj': 1.0, 'label_smoothing': 0.0, 'nbs': 64, 'hsv_h': 0.015, 'hsv_s': 0.7, 'hsv_v': 0.4, 'degrees': 0.0, 'translate': 0.1, 'scale': 0.5, 'shear': 0.0, 'perspective': 0.0, 'flipud': 0.0, 'fliplr': 0.5, 'mosaic': 1.0, 'mixup': 0.0, 'copy_paste': 0.0, 'cfg': None, 'v5loader': False, 'tracker': 'botsort.yaml', 'save_dir': 'runs/detect/train'}
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_init.py:init():569] starting backend
+2023-05-18 10:40:36,732 INFO    MainThread:1160312 [wandb_init.py:init():573] setting up manager
+2023-05-18 10:40:36,733 INFO    MainThread:1160312 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-05-18 10:40:36,734 INFO    MainThread:1160312 [wandb_init.py:init():580] backend started and connected
+2023-05-18 10:40:36,737 INFO    MainThread:1160312 [wandb_init.py:init():658] updated telemetry
+2023-05-18 10:40:36,737 INFO    MainThread:1160312 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2023-05-18 10:41:05,362 ERROR   Thread-2  :1160312 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1256, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1302, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x7f52916e24c0>, 'Connection to 10.60.133.139 timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.60.133.139', port=3128): Max retries exceeded with url: http://localhost:8093/graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f52916e24c0>, 'Connection to 10.60.133.139 timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 213, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPConnectionPool(host='10.60.133.139', port=3128): Max retries exceeded with url: http://localhost:8093/graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f52916e24c0>, 'Connection to 10.60.133.139 timed out. (connect timeout=10)'))
+2023-05-18 10:41:36,765 ERROR   MainThread:1160312 [wandb_init.py:init():704] backend process timed out
+2023-05-18 10:41:36,765 ERROR   MainThread:1160312 [wandb_init.py:init():713] encountered error: Error communicating with wandb process
+For more info see: https://docs.wandb.ai/library/init#init-start-error

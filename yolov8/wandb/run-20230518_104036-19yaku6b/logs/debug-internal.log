@@ -1,0 +1,331 @@
+2023-05-18 10:40:36,738 INFO    StreamThr :1160361 [internal.py:wandb_internal():88] W&B internal server running at pid: 1160361, started at: 2023-05-18 10:40:36.737604
+2023-05-18 10:40:36,739 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: status
+2023-05-18 10:40:36,739 DEBUG   SenderThread:1160361 [sender.py:send_request():317] send_request: status
+2023-05-18 10:40:36,740 INFO    WriterThread:1160361 [datastore.py:open_for_write():75] open: /home/nts1/users/datts/image_matching/ultralytics-main/wandb/run-20230518_104036-19yaku6b/run-19yaku6b.wandb
+2023-05-18 10:40:36,740 DEBUG   SenderThread:1160361 [sender.py:send():303] send: header
+2023-05-18 10:40:36,740 DEBUG   SenderThread:1160361 [sender.py:send():303] send: run
+2023-05-18 10:40:41,741 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:40:46,744 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:40:51,746 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:40:56,748 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:01,750 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:06,752 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:10,047 ERROR   SenderThread:1160361 [retry.py:__call__():154] Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/util/connection.py", line 95, in create_connection
+    raise err
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1256, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1302, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 1011, in _send_output
+    self.send(msg)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/http/client.py", line 951, in send
+    self.connect()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connection.py", line 179, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPConnection object at 0x7f8faa9980d0>, 'Connection to 10.60.133.139 timed out. (connect timeout=10)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='10.60.133.139', port=3128): Max retries exceeded with url: http://localhost:8093/graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8faa9980d0>, 'Connection to 10.60.133.139 timed out. (connect timeout=10)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 213, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/adapters.py", line 507, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPConnectionPool(host='10.60.133.139', port=3128): Max retries exceeded with url: http://localhost:8093/graphql (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x7f8faa9980d0>, 'Connection to 10.60.133.139 timed out. (connect timeout=10)'))
+2023-05-18 10:41:11,755 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:16,757 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:21,759 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:26,762 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:31,763 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:37,774 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: poll_exit
+2023-05-18 10:41:42,777 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:47,780 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:52,783 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:41:57,785 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:02,788 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:07,790 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:12,792 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:17,794 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:22,796 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:27,798 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:32,801 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:37,803 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:42,806 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:47,808 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:52,810 DEBUG   HandlerThread:1160361 [handler.py:handle_request():138] handle_request: keepalive
+2023-05-18 10:42:53,896 WARNING StreamThr :1160361 [internal.py:is_dead():385] Internal process exiting, parent pid 1160312 disappeared
+2023-05-18 10:42:53,896 ERROR   StreamThr :1160361 [internal.py:wandb_internal():147] Internal process shutdown.
+2023-05-18 10:42:54,793 INFO    WriterThread:1160361 [datastore.py:close():279] close: /home/nts1/users/datts/image_matching/ultralytics-main/wandb/run-20230518_104036-19yaku6b/run-19yaku6b.wandb
+2023-05-18 10:42:54,812 INFO    HandlerThread:1160361 [handler.py:finish():814] shutting down handler
+2023-05-18 10:51:39,387 ERROR   SenderThread:1160361 [internal_api.py:execute():216] 403 response executing GraphQL.
+2023-05-18 10:51:39,387 ERROR   SenderThread:1160361 [internal_api.py:execute():217] 
+<html><head>
+<meta type="copyright" content="Copyright (C) 1996-2015 The Squid Software Foundation and contributors">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ERROR: The requested URL could not be retrieved</title>
+<style type="text/css"><!--
+ /*
+ * Copyright (C) 1996-2019 The Squid Software Foundation and contributors
+ *
+ * Squid software is distributed under GPLv2+ license and includes
+ * contributions from numerous individuals and organizations.
+ * Please see the COPYING and CONTRIBUTORS files for details.
+ */
+
+/*
+ Stylesheet for Squid Error pages
+ Adapted from design by Free CSS Templates
+ http://www.freecsstemplates.org
+ Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+/* Page basics */
+* {
+	font-family: verdana, sans-serif;
+}
+
+html body {
+	margin: 0;
+	padding: 0;
+	background: #efefef;
+	font-size: 12px;
+	color: #1e1e1e;
+}
+
+/* Page displayed title area */
+#titles {
+	margin-left: 15px;
+	padding: 10px;
+	padding-left: 100px;
+	background: url('/squid-internal-static/icons/SN.png') no-repeat left;
+}
+
+/* initial title */
+#titles h1 {
+	color: #000000;
+}
+#titles h2 {
+	color: #000000;
+}
+
+/* special event: FTP success page titles */
+#titles ftpsuccess {
+	background-color:#00ff00;
+	width:100%;
+}
+
+/* Page displayed body content area */
+#content {
+	padding: 10px;
+	background: #ffffff;
+}
+
+/* General text */
+p {
+}
+
+/* error brief description */
+#error p {
+}
+
+/* some data which may have caused the problem */
+#data {
+}
+
+/* the error message received from the system or other software */
+#sysmsg {
+}
+
+pre {
+}
+
+/* special event: FTP / Gopher directory listing */
+#dirmsg {
+    font-family: courier, monospace;
+    color: black;
+    font-size: 10pt;
+}
+#dirlisting {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#dirlisting tr.entry td.icon,td.filename,td.size,td.date {
+    border-bottom: groove;
+}
+#dirlisting td.size {
+    width: 50px;
+    text-align: right;
+    padding-right: 5px;
+}
+
+/* horizontal lines */
+hr {
+	margin: 0;
+}
+
+/* page displayed footer area */
+#footer {
+	font-size: 9px;
+	padding-left: 10px;
+}
+
+
+body
+:lang(fa) { direction: rtl; font-size: 100%; font-family: Tahoma, Roya, sans-serif; float: right; }
+:lang(he) { direction: rtl; }
+ --></style>
+</head><body id="ERR_ACCESS_DENIED">
+<div id="titles">
+<h1>ERROR</h1>
+<h2>The requested URL could not be retrieved</h2>
+</div>
+<hr>
+
+<div id="content">
+<p>The following error was encountered while trying to retrieve the URL: <a href="http://localhost:8093/graphql">http://localhost:8093/graphql</a></p>
+
+<blockquote id="error">
+<p><b>Access Denied.</b></p>
+</blockquote>
+
+<p>Access control configuration prevents your request from being allowed at this time. Please contact your service provider if you feel this is incorrect.</p>
+
+<p>Your cache administrator is <a href="mailto:webmaster?subject=CacheErrorInfo%20-%20ERR_ACCESS_DENIED&amp;body=CacheHost%3A%20proxy-vtnet%0D%0AErrPage%3A%20ERR_ACCESS_DENIED%0D%0AErr%3A%20%5Bnone%5D%0D%0ATimeStamp%3A%20Thu,%2018%20May%202023%2003%3A50%3A45%20GMT%0D%0A%0D%0AClientIP%3A%2010.255.216.32%0D%0A%0D%0AHTTP%20Request%3A%0D%0APOST%20%2Fgraphql%20HTTP%2F1.1%0AUser-Agent%3A%20W%26B%20Internal%20Client%200.13.4%0D%0AAccept-Encoding%3A%20gzip,%20deflate,%20br%0D%0AAccept%3A%20*%2F*%0D%0AConnection%3A%20keep-alive%0D%0AContent-Length%3A%20207%0D%0AContent-Type%3A%20application%2Fjson%0D%0AAuthorization%3A%20Basic%20YXBpOmxvY2FsLWY3MzI4Y2E5N2Y5NGUyM2Y1YjViYjg4Mzg5YjU1NWZlMTc1MWUyMzc%3D%0D%0AHost%3A%20localhost%3A8093%0D%0A%0D%0A%0D%0A">webmaster</a>.</p>
+<br>
+</div>
+
+<hr>
+<div id="footer">
+<p>Generated Thu, 18 May 2023 03:50:45 GMT by proxy-vtnet (squid/4.9)</p>
+<!-- ERR_ACCESS_DENIED -->
+</div>
+</body></html>
+
+2023-05-18 10:51:39,387 ERROR   StreamThr :1160361 [internal.py:wandb_internal():163] Thread SenderThread:
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 113, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 213, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/requests/models.py", line 960, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: http://localhost:8093/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 431, in server_settings_introspection
+    res = self.gql(query)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 129, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/util.py", line 977, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1417, in upsert_run
+    self.server_settings_introspection()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 431, in server_settings_introspection
+    res = self.gql(query)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 129, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/util.py", line 977, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 50, in run
+    self._run()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_util.py", line 101, in _run
+    self._process(record)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal.py", line 308, in _process
+    self._sm.send(record)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 305, in send
+    send_handler(record)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 797, in send_run
+    self._init_run(run, config_value_dict)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/sender.py", line 823, in _init_run
+    server_run, inserted, server_messages = self._api.upsert_run(
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1417, in upsert_run
+    self.server_settings_introspection()
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 62, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/apis/normalize.py", line 26, in wrapper
+    return func(*args, **kwargs)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 431, in server_settings_introspection
+    res = self.gql(query)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 129, in __call__
+    retry_timedelta_triggered = check_retry_fn(e)
+  File "/home/nts1/miniconda3/envs/datts/lib/python3.8/site-packages/wandb/util.py", line 977, in no_retry_auth
+    raise CommError("Permission denied, ask the project owner to grant you access")
+wandb.errors.CommError: Permission denied, ask the project owner to grant you access
